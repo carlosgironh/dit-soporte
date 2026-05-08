@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamento de Soporte Técnico | Presidencia de la República de Panamá</title>
+    <title>Dirección de Soporte Técnico | Departamento de Innovación y Tecnología</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Paleta Panamá + Tech Sofisticado */
-            --panama-red: #C41E3A;
-            --panama-red-glow: rgba(196, 30, 58, 0.25);
-            --panama-blue: #0057B8;
-            --panama-blue-glow: rgba(0, 87, 184, 0.25);
-            --panama-white: #F8FAFC;
+            /* Paleta Institucional + Tech Sofisticado */
+            --inst-red: #B91C3C;
+            --inst-red-glow: rgba(185, 28, 60, 0.25);
+            --inst-blue: #0F4C81;
+            --inst-blue-glow: rgba(15, 76, 129, 0.25);
+            --inst-white: #F8FAFC;
             
             /* Base tecnológica elegante */
             --navy-950: #020617;
@@ -21,7 +21,6 @@
             --navy-800: #111D32;
             --navy-700: #1A2744;
             --navy-600: #243656;
-            --gold-accent: #D4AF37;
             
             --text-primary: #F1F5F9;
             --text-secondary: #94A3B8;
@@ -61,7 +60,7 @@
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--panama-blue);
+            background: var(--inst-blue);
         }
 
         /* Navegación institucional */
@@ -76,7 +75,7 @@
         }
 
         .gov-bar {
-            background: linear-gradient(90deg, var(--panama-red), var(--panama-blue));
+            background: linear-gradient(90deg, var(--inst-red), var(--inst-blue));
             height: 3px;
             width: 100%;
         }
@@ -101,13 +100,15 @@
         .logo-shield {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, var(--panama-red), var(--panama-blue));
+            background: linear-gradient(135deg, var(--inst-red), var(--inst-blue));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            box-shadow: 0 0 20px rgba(0, 87, 184, 0.3);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 0 20px rgba(15, 76, 129, 0.3);
             border: 2px solid rgba(255,255,255,0.2);
         }
 
@@ -148,7 +149,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--panama-white);
+            color: var(--inst-white);
         }
 
         .nav-links a::after {
@@ -158,7 +159,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--panama-red), var(--panama-blue));
+            background: linear-gradient(90deg, var(--inst-red), var(--inst-blue));
             transition: width 0.3s ease;
         }
 
@@ -168,7 +169,7 @@
 
         .nav-cta {
             padding: 10px 24px;
-            background: linear-gradient(135deg, var(--panama-red), #9B1B30);
+            background: linear-gradient(135deg, var(--inst-red), #7F1D2F);
             color: white;
             border-radius: 8px;
             font-weight: 600;
@@ -176,12 +177,12 @@
             text-decoration: none;
             border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px var(--panama-red-glow);
+            box-shadow: 0 4px 15px var(--inst-red-glow);
         }
 
         .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px var(--panama-red-glow);
+            box-shadow: 0 8px 25px var(--inst-red-glow);
         }
 
         .mobile-menu-btn {
@@ -208,8 +209,8 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(ellipse at 20% 50%, rgba(0, 87, 184, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(196, 30, 58, 0.08) 0%, transparent 50%);
+                radial-gradient(ellipse at 20% 50%, rgba(15, 76, 129, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(185, 28, 60, 0.08) 0%, transparent 50%);
         }
 
         .hero-grid {
@@ -234,8 +235,8 @@
             align-items: center;
             gap: 10px;
             padding: 8px 20px;
-            background: rgba(0, 87, 184, 0.1);
-            border: 1px solid rgba(0, 87, 184, 0.25);
+            background: rgba(15, 76, 129, 0.1);
+            border: 1px solid rgba(15, 76, 129, 0.25);
             border-radius: 100px;
             font-size: 0.8rem;
             color: #60A5FA;
@@ -248,10 +249,10 @@
         .hero-badge .pulse {
             width: 8px;
             height: 8px;
-            background: var(--panama-blue);
+            background: var(--inst-blue);
             border-radius: 50%;
             animation: pulse 2s infinite;
-            box-shadow: 0 0 10px var(--panama-blue);
+            box-shadow: 0 0 10px var(--inst-blue);
         }
 
         @keyframes pulse {
@@ -266,11 +267,8 @@
             line-height: 1.15;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, #fff 0%, #94A3B8 100%);
-
-            background-clip: text;
             -webkit-background-clip: text;
-
-            color: transparent;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -304,15 +302,15 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--panama-blue), #003d80);
+            background: linear-gradient(135deg, var(--inst-blue), #0A3A63);
             color: white;
-            box-shadow: 0 4px 20px var(--panama-blue-glow);
+            box-shadow: 0 4px 20px var(--inst-blue-glow);
             border: 1px solid rgba(255,255,255,0.1);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--panama-blue-glow);
+            box-shadow: 0 8px 30px var(--inst-blue-glow);
         }
 
         .btn-secondary {
@@ -323,8 +321,8 @@
         }
 
         .btn-secondary:hover {
-            border-color: var(--panama-red);
-            color: var(--panama-red);
+            border-color: var(--inst-red);
+            color: var(--inst-red);
             transform: translateY(-2px);
         }
 
@@ -350,14 +348,10 @@
         .stat-number {
             font-size: 2.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--panama-blue), #60A5FA);
-
-            background-clip: text;
+            background: linear-gradient(135deg, var(--inst-blue), #60A5FA);
             -webkit-background-clip: text;
-
-            color: transparent;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-
             display: block;
         }
 
@@ -404,8 +398,8 @@
         .section-tag {
             display: inline-block;
             padding: 6px 18px;
-            background: rgba(0, 87, 184, 0.1);
-            border: 1px solid rgba(0, 87, 184, 0.2);
+            background: rgba(15, 76, 129, 0.1);
+            border: 1px solid rgba(15, 76, 129, 0.2);
             border-radius: 100px;
             color: #60A5FA;
             font-size: 0.75rem;
@@ -444,14 +438,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--panama-red), var(--panama-blue));
+            background: linear-gradient(90deg, var(--inst-red), var(--inst-blue));
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(0, 87, 184, 0.3);
+            border-color: rgba(15, 76, 129, 0.3);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
@@ -462,7 +456,7 @@
         .service-icon {
             width: 52px;
             height: 52px;
-            background: linear-gradient(135deg, rgba(0, 87, 184, 0.2), rgba(196, 30, 58, 0.2));
+            background: linear-gradient(135deg, rgba(15, 76, 129, 0.2), rgba(185, 28, 60, 0.2));
             border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
             display: flex;
@@ -499,7 +493,7 @@
             right: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(0, 87, 184, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(15, 76, 129, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -566,7 +560,7 @@
             inset: -1px;
             border-radius: 20px;
             padding: 1px;
-            background: linear-gradient(135deg, rgba(0,87,184,0.3), rgba(196,30,58,0.3));
+            background: linear-gradient(135deg, rgba(15,76,129,0.3), rgba(185,28,60,0.3));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
@@ -586,9 +580,9 @@
         .ticket-dot {
             width: 12px;
             height: 12px;
-            background: var(--panama-red);
+            background: var(--inst-red);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--panama-red-glow);
+            box-shadow: 0 0 10px var(--inst-red-glow);
         }
 
         .ticket-header h4 {
@@ -610,15 +604,15 @@
         }
 
         .badge-urgent {
-            background: rgba(196, 30, 58, 0.15);
+            background: rgba(185, 28, 60, 0.15);
             color: #F87171;
-            border: 1px solid rgba(196, 30, 58, 0.3);
+            border: 1px solid rgba(185, 28, 60, 0.3);
         }
 
         .badge-normal {
-            background: rgba(0, 87, 184, 0.15);
+            background: rgba(15, 76, 129, 0.15);
             color: #60A5FA;
-            border: 1px solid rgba(0, 87, 184, 0.3);
+            border: 1px solid rgba(15, 76, 129, 0.3);
         }
 
         .ticket-meta {
@@ -666,7 +660,7 @@
         }
 
         .faq-item:hover {
-            border-color: rgba(0, 87, 184, 0.2);
+            border-color: rgba(15, 76, 129, 0.2);
         }
 
         .faq-question {
@@ -683,13 +677,13 @@
         .faq-question::after {
             content: '+';
             font-size: 1.5rem;
-            color: var(--panama-blue);
+            color: var(--inst-blue);
             transition: transform 0.3s ease;
         }
 
         .faq-item.active .faq-question::after {
             transform: rotate(45deg);
-            color: var(--panama-red);
+            color: var(--inst-red);
         }
 
         .faq-answer {
@@ -720,7 +714,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--panama-blue), var(--panama-red), transparent);
+            background: linear-gradient(90deg, transparent, var(--inst-blue), var(--inst-red), transparent);
             opacity: 0.3;
         }
 
@@ -753,7 +747,7 @@
         .contact-item-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, rgba(0,87,184,0.15), rgba(196,30,58,0.15));
+            background: linear-gradient(135deg, rgba(15,76,129,0.15), rgba(185,28,60,0.15));
             border: 1px solid var(--glass-border);
             border-radius: 12px;
             display: flex;
@@ -814,8 +808,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--panama-blue);
-            box-shadow: 0 0 0 3px rgba(0, 87, 184, 0.15);
+            border-color: var(--inst-blue);
+            box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.15);
         }
 
         .form-group textarea {
@@ -885,7 +879,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--panama-blue);
+            color: var(--inst-blue);
         }
 
         .footer-bottom {
@@ -1012,7 +1006,7 @@
             display: block;
             text-align: center;
             padding: 12px;
-            background: linear-gradient(135deg, var(--panama-red), #9B1B30);
+            background: linear-gradient(135deg, var(--inst-red), #7F1D2F);
             color: white;
             border-radius: 10px;
             text-decoration: none;
@@ -1027,10 +1021,10 @@
         <div class="gov-bar"></div>
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-shield">🇵🇦</div>
+                <div class="logo-shield">DT</div>
                 <div class="logo-text">
-                    <span class="gov-name">Presidencia de la República</span>
-                    <span class="dept-name">Dirección de Soporte Técnico</span>
+                    <span class="gov-name">Dirección de Innovación</span>
+                    <span class="dept-name">Soporte Técnico</span>
                 </div>
             </a>
             <ul class="nav-links">
@@ -1061,10 +1055,10 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="pulse"></span>
-                Mesa de Ayuda Presidencial
+                Mesa de Ayuda Institucional
             </div>
-            <h1>Soporte Técnico de Excelencia para la Gestión de Gobierno</h1>
-            <p>Brindamos asistencia tecnológica especializada a los funcionarios y dependencias de la Presidencia de la República de Panamá, garantizando la continuidad operativa con los más altos estándares de seguridad y eficiencia.</p>
+            <h1>Soporte Técnico de Excelencia para la Gestión Institucional</h1>
+            <p>Brindamos asistencia tecnológica especializada a los funcionarios y dependencias de la institución, garantizando la continuidad operativa con los más altos estándares de seguridad y eficiencia.</p>
             <div class="hero-buttons">
                 <a href="#ticket" class="btn btn-primary">Crear Ticket de Soporte →</a>
                 <a href="#faq" class="btn btn-secondary">Centro de Ayuda</a>
@@ -1091,8 +1085,8 @@
         <div class="container">
             <div class="section-header fade-in">
                 <span class="section-tag">Nuestros Servicios</span>
-                <h2>Infraestructura Tecnológica Presidencial</h2>
-                <p>Soluciones integrales diseñadas para mantener la operatividad de las dependencias del Órgano Ejecutivo.</p>
+                <h2>Infraestructura Tecnológica Institucional</h2>
+                <p>Soluciones integrales diseñadas para mantener la operatividad de las dependencias del órgano rector.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
@@ -1113,7 +1107,7 @@
                 <div class="service-card fade-in">
                     <div class="service-icon">☁️</div>
                     <h3>Servidores y Cloud</h3>
-                    <p>Administración de servidores físicos y virtuales, respaldos automatizados, y servicios en la nube gubernamental.</p>
+                    <p>Administración de servidores físicos y virtuales, respaldos automatizados, y servicios en la nube institucional.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">📧</div>
@@ -1123,7 +1117,7 @@
                 <div class="service-card fade-in">
                     <div class="service-icon">📱</div>
                     <h3>Aplicaciones Institucionales</h3>
-                    <p>Soporte técnico a sistemas de gestión documental, ERP gubernamental, firmas digitales y trámites en línea.</p>
+                    <p>Soporte técnico a sistemas de gestión documental, ERP institucional, firmas digitales y trámites en línea.</p>
                 </div>
             </div>
         </div>
@@ -1193,19 +1187,19 @@
             <div class="faq-grid">
                 <div class="faq-item fade-in" onclick="toggleFaq(this)">
                     <div class="faq-question">¿Cómo restablezco mi contraseña institucional?</div>
-                    <div class="faq-answer">Puede restablecer su contraseña accediendo al portal de identidad institucional con su número de cédula. Si no tiene acceso al correo alternativo registrado, debe acudir a la Dirección de Soporte con su identificación física para verificación presencial.</div>
+                    <div class="faq-answer">Puede restablecer su contraseña accediendo al portal de identidad institucional con su número de identificación. Si no tiene acceso al correo alternativo registrado, debe acudir a la Dirección de Soporte con su identificación física para verificación presencial.</div>
                 </div>
                 <div class="faq-item fade-in" onclick="toggleFaq(this)">
                     <div class="faq-question">¿Cuál es el tiempo de respuesta para reportes de red?</div>
-                    <div class="faq-answer">Los incidentes de red y conectividad tienen un SLA de 4 horas hábiles para nivel 1. En caso de fallas críticas que afecten la operatividad del Órgano Ejecutivo, el tiempo de respuesta es de 15 minutos con escalamiento inmediato.</div>
+                    <div class="faq-answer">Los incidentes de red y conectividad tienen un SLA de 4 horas hábiles para nivel 1. En caso de fallas críticas que afecten la operatividad institucional, el tiempo de respuesta es de 15 minutos con escalamiento inmediato.</div>
                 </div>
                 <div class="faq-item fade-in" onclick="toggleFaq(this)">
                     <div class="faq-question">¿Cómo solicito instalación de software institucional?</div>
-                    <div class="faq-answer">Toda instalación de software debe solicitarse mediante ticket categorizado como "Aplicaciones Institucionales". El software será evaluado por el área de Seguridad Informática antes de su despliegue para garantizar el cumplimiento de políticas gubernamentales.</div>
+                    <div class="faq-answer">Toda instalación de software debe solicitarse mediante ticket categorizado como "Aplicaciones Institucionales". El software será evaluado por el área de Seguridad Informática antes de su despliegue para garantizar el cumplimiento de políticas institucionales.</div>
                 </div>
                 <div class="faq-item fade-in" onclick="toggleFaq(this)">
                     <div class="faq-question">¿Qué hago si detecto un correo sospechoso (phishing)?</div>
-                    <div class="faq-answer">No abra enlaces ni descargue archivos adjuntos. Reporte inmediatamente el correo al área de Ciberseguridad vía ticket marcado como "Alta Prioridad" o llamando a la extensión de emergencia 8888. Incluya el remitente y una captura de pantalla.</div>
+                    <div class="faq-answer">No abra enlaces ni descargue archivos adjuntos. Reporte inmediatamente el correo al área de Ciberseguridad vía ticket marcado como "Alta Prioridad" o llamando a la extensión de emergencia. Incluya el remitente y una captura de pantalla.</div>
                 </div>
                 <div class="faq-item fade-in" onclick="toggleFaq(this)">
                     <div class="faq-question">¿Cómo accedo a la VPN institucional desde casa?</div>
@@ -1226,27 +1220,27 @@
             <div class="contact-grid">
                 <div class="contact-info fade-in">
                     <h3>Dirección de Soporte Técnico</h3>
-                    <p>Estamos ubicados en el Palacio de las Garzas, nivel técnico. Nuestro equipo está disponible para atender incidentes críticos y brindar soporte especializado a todas las dependencias del Ejecutivo.</p>
+                    <p>Nuestro equipo está disponible para atender incidentes críticos y brindar soporte especializado a todas las dependencias de la institución.</p>
                     
                     <div class="contact-item">
                         <div class="contact-item-icon">📍</div>
                         <div class="contact-item-text">
                             <h4>Ubicación</h4>
-                            <p>Palacio de las Garzas, Nivel Sótano Técnico<br>Panamá, República de Panamá</p>
+                            <p>Edificio Sede Central, Nivel Técnico<br>Ciudad Capital</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">📞</div>
                         <div class="contact-item-text">
                             <h4>Teléfono Directo</h4>
-                            <p>+507 500-0000 Ext. 8888 (Emergencias)<br>+507 500-0001 Ext. 8801 (Mesa de Ayuda)</p>
+                            <p>+1 (555) 123-4567 Ext. 8888 (Emergencias)<br>+1 (555) 123-4568 Ext. 8801 (Mesa de Ayuda)</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-item-icon">📧</div>
                         <div class="contact-item-text">
                             <h4>Correo Institucional</h4>
-                            <p>soporte.tecnico@presidencia.gob.pa<br>ciberseguridad@presidencia.gob.pa</p>
+                            <p>soporte.tecnico@institucion.gob<br>ciberseguridad@institucion.gob</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1265,13 +1259,13 @@
                             <input type="text" id="name" placeholder="Ej. Juan Pérez" required>
                         </div>
                         <div class="form-group">
-                            <label for="id">Cédula / Pasaporte</label>
-                            <input type="text" id="id" placeholder="8-XXX-XXXX" required>
+                            <label for="id">Identificación</label>
+                            <input type="text" id="id" placeholder="Número de identificación" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email">Correo institucional</label>
-                        <input type="email" id="email" placeholder="nombre@presidencia.gob.pa" required>
+                        <input type="email" id="email" placeholder="nombre@institucion.gob" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
@@ -1314,13 +1308,13 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#" class="logo">
-                    <div class="logo-shield">🇵🇦</div>
+                    <div class="logo-shield">DT</div>
                     <div class="logo-text">
-                        <span class="gov-name">Presidencia de la República</span>
-                        <span class="dept-name">Dirección de Soporte Técnico</span>
+                        <span class="gov-name">Dirección de Innovación</span>
+                        <span class="dept-name">Soporte Técnico</span>
                     </div>
                 </a>
-                <p>Comprometidos con la excelencia tecnológica al servicio de la gestión pública y el desarrollo institucional de Panamá.</p>
+                <p>Comprometidos con la excelencia tecnológica al servicio de la gestión institucional y el desarrollo organizacional.</p>
             </div>
             <div class="footer-links">
                 <h4>Servicios</h4>
@@ -1345,13 +1339,13 @@
                 <ul>
                     <li><a href="#">Términos de Uso</a></li>
                     <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Ley 81 de Protección de Datos</a></li>
+                    <li><a href="#">Protección de Datos</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Presidencia de la República de Panamá. Todos los derechos reservados.</p>
-            <span class="gov-seal">🇵🇦</span>
+            <p>© 2026 Dirección de Innovación y Tecnología. Todos los derechos reservados.</p>
+            <span class="gov-seal">⚖️</span>
         </div>
     </footer>
 
